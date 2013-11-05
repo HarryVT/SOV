@@ -9,7 +9,11 @@
 	<div id="placeholder"></div>
    </BODY>
 </HTML>
-	  <script>
-	   var data={"firstName":"Ray"};
-	    document.getElementById("placeholder").innerHTML=data.firstName;
-	    </script>
+<script>
+  var data={
+    "firstName":"Ray",
+    "lastName":"Villalobos",
+    "joined":2012
+  };
+  document.getElementById("placeholder").innerHTML=data.firstName+" "+data.lastName+" "+data.joined;
+</script>
