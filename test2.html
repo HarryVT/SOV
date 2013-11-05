@@ -11,7 +11,7 @@
     var socrata_callback = function(search){
     search.results
     for(var i = 0;i<search.results.length;i++)
-      document.write(search.results[i].name+': '+search.results[i].desc+'<br>')
+      document.write(search.results[i].name+': '+search.results[i].descr+'<br>')
     }
   </script>
   <script src='http://vermont.demo.socrata.com/resource/2p8v-m8st.json?callback=socrata_callback'></script>
