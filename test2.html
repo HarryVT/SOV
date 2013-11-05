@@ -14,17 +14,6 @@
       document.write(search.results[i].name+': '+search.results[i].desc+'<br>')
     }
   </script>
-  <script src='http://search.twitter.com/search.json?q=baroquebobcat&callback=twitter_callback'></script>
-/    <script>
-/  $.getJSON('data.json', function(data) {
-/        var output="<ul>";
-/        for (var i in data.users) {
-/            output+="<li>" + data.users[i].firstName + " " + data.users[i].lastName + "--" + data.users[i].joined.month+"</li>";
-/        }
-/
-/        output+="</ul>";
-/        document.getElementById("placeholder").innerHTML=output;
-/  });
-/    </script>
+  <script src='http://vermont.demo.socrata.com/resource/2p8v-m8st.json?q=baroquebobcat&callback=socrata_callback'></script>
 </body>
 </html>
