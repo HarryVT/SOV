@@ -6,10 +6,11 @@
    </HEAD>
    <BODY>
       <P>Hello world!</p>
-	<script>
-	    var data={ "firstName" : "Ray" };
-	    alert(data.firstName);
-	</script>
+	<div id="placeholder"></div>
+	  <script>
+	   var data={"firstName":"Ray"};
+	    document.getElementById("placeholder").innerHTML=data.firstName;
+	    </script>
    </BODY>
 </HTML>
 <script>
