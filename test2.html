@@ -8,15 +8,23 @@
     <div id="placeholder"></div>
     <script src="http://code.jquery.com/jquery-1.7.1.min.js"></script>
     <script>
-  $.getJSON('data.json', function(data) {
-        var output="<ul>";
-        for (var i in data.users) {
-            output+="<li>" + data.users[i].firstName + " " + data.users[i].lastName + "--" + data.users[i].joined.month+"</li>";
-        }
-
-        output+="</ul>";
-        document.getElementById("placeholder").innerHTML=output;
-  });
-    </script>
+    var socrata_callback = function(search){
+    search.results
+    for(var i = 0;i<search.results.length;i++)
+      document.write(search.results[i].name+': '+search.results[i].desc+'<br>')
+    }
+  </script>
+  <script src='http://search.twitter.com/search.json?q=baroquebobcat&callback=twitter_callback'></script>
+/    <script>
+/  $.getJSON('data.json', function(data) {
+/        var output="<ul>";
+/        for (var i in data.users) {
+/            output+="<li>" + data.users[i].firstName + " " + data.users[i].lastName + "--" + data.users[i].joined.month+"</li>";
+/        }
+/
+/        output+="</ul>";
+/        document.getElementById("placeholder").innerHTML=output;
+/  });
+/    </script>
 </body>
 </html>
