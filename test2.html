@@ -8,12 +8,13 @@
     <script>
     var socrata_callback = function(search){
     search.results
-    for(var i = 0;i<search.results.length;i++)
-        document.write(search.results[i].name+': '+search.results[i].descr+'<br>')
-        document.write("i = ");
-        document.write(i);
-        document.write("Is this damn thing working? </br>");
+      for(var i = 0;i<10;i++)
+    document.write("Is this damn thing working? </br>");
+    document.write(search.results[i].name+': '+search.results[i].descr+'<br>')
     }
+    document.write("Is this damn thing working? </br>");
+    document.write("i = ");
+    document.write(search.results.length);
     </script>
   <script src='https://vermont.demo.socrata.com/resource/2p8v-m8st.json?$jsonp=socrata_callback&$limit=100&$offset=0'></script>
 </body>
