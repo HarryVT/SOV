@@ -9,7 +9,7 @@
     var socrata_callback = function(search){
     search
       for(var i = 0;i<search.length;i++)
-    document.write(search[i].name+': '+search[i].descr+'<br>');
+    document.write(search[i].name+': '+search[i].descr+' '+search[i].paymentdate+' '+search[i].invoice+' '+search[i].invoicedate+' '+search[i].voucher_paid_amount+'<br>');
     document.write("i = ");
     document.write(i);
     }
