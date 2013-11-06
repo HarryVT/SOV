@@ -7,11 +7,13 @@
 <body>
 <form name="submit_form">
 Search: <input type="text" name="test"><br>
-<input type="submit" value="Submit">
+<input type="submit" value="Submit" onclick="display()">
 </form>
 <script>
+function display(){
 var go_get = document.forms['submit_form']['test'].value;
     document.write('go_get='+go_get);
+}
 </script>
 <table border="1">
 <tr><td>Name</td><td>Description</td><td>Payment Date</td><td>Invoice Number</td><td>Invoice Date</td><td>Payment Amount</td></tr>
