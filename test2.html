@@ -8,7 +8,7 @@
     <script>
     var socrata_callback = function(search){
     search
-      for(var i = 0;i<10;i++)
+      for(var i = 0;i<search.length;i++)
     document.write(search[i].name+': '+search[i].descr+'<br>');
     document.write("i = ")
     document.write(i);
