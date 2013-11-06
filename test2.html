@@ -9,11 +9,11 @@
     var socrata_callback = function(search){
     search
       for(var i = 0;i<search.length;i++)
-    document.write(search[i].name+': '+search[i].descr+'<br>');
+    document.write(search[i].name+': '+search[i].descr+' '+search[i].paymentdate+' '+search[i].invoice+' '+search[i].invoicedate+' '+search[i].voucher_paid_amount+'<br>');
     document.write("i = ");
     document.write(i);
     }
     </script>
-  <script src='https://vermont.demo.socrata.com/resource/2p8v-m8st.json?$jsonp=socrata_callback$where=voucher_paid_amount < 500&$limit=100&$offset=0'></script>
+  <script src='https://vermont.demo.socrata.com/resource/2p8v-m8st.json?$jsonp=socrata_callback&$where=voucher_paid_amount < 500&$limit=100&$offset=0'></script>
 </body>
 </html>
