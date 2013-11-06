@@ -2,20 +2,20 @@
 <html lang="en">
 <head>
     <meta charset="utf-8" />
-    <title>JSON Sample</title>
+ <TITLE>Test Input</TITLE>
 </head>
 <body>
-
-    <script>
-  $.getJSON('https://vermont.demo.socrata.com/resource/2p8v-m8st.json', function(data) {
-        var output="<ul>";
-        for (var i in data) {
-            output+="<li>" + data[i].name + " " + data[i].descr + "--" + data[i].invoice+"</li>";
-        }
-
-        output+="</ul>";
-        document.getElementById("placeholder").innerHTML=output;
-  });
-    </script>
+<SCRIPT LANGUAGE="JavaScript">
+function testResults (form) {
+    var TestVar = form.inputbox.value;
+    alert ("You typed: " + TestVar);
+}
+</SCRIPT>
+</HEAD>
+<BODY>
+<FORM NAME="myform" ACTION="" METHOD="GET">Enter something in the box: <BR>
+<INPUT TYPE="text" NAME="inputbox" VALUE=""><P>
+<INPUT TYPE="button" NAME="button" Value="Click" onClick="testResults(this.form)">
+</FORM>
     </body>
 </html>
