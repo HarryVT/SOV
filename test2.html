@@ -5,6 +5,14 @@
     <title>JSON Sample</title>
 </head>
 <body>
+<form name="submit_form">
+Search: <input type="text" name="test"><br>
+<input type="submit" value="Submit">
+</form>
+<script>
+var goget document.forms['submit_form']['test'];
+document.write (goget+'</br>')
+</script>
 <table border="1">
 <tr><td>Name</td><td>Description</td><td>Payment Date</td><td>Invoice Number</td><td>Invoice Date</td><td>Payment Amount</td></tr>
     <script>
