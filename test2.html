@@ -7,11 +7,11 @@
 <body>
     <script>
     var socrata_callback = function(search){
-    search.results
+    search
       for(var i = 0;i<10;i++)
-      document.write(search.results)
+      document.write(search)
     document.write("Is this damn thing working? </br>");
-    document.write(search.results[i].name+': '+search.results[i].descr+'<br>')
+    document.write(search[i].name+': '+search[i].descr+'<br>')
     document.write("i = ");
     document.write(i);
     }
