@@ -1,10 +1,22 @@
-<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN"
-   "http://www.w3.org/TR/html4/strict.dtd">
-<HTML>
-   <HEAD>
-      <TITLE>My first HTML document</TITLE>
-   </HEAD>
-   <BODY>
-        <div><a href="http://vermont.demo.socrata.com/resource/2p8v-m8st.json">Get Data</a></div>
-   </BODY>
-</HTML>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <title>JSON Sample</title>
+</head>
+<body>
+   <script>
+      var obj = eval ("(" + socrata_callback + ")");
+   </script>
+<p>
+First Name: <span id="fname"></span><br /> 
+Last Name: <span id="lname"></span><br /> 
+</p> 
+
+<script>
+   document.getElementById("fname").innerHTML = obj.employees[1].firstName 
+   document.getElementById("lname").innerHTML = obj.employees[1].lastName 
+</script>
+<script src='https://vermont.demo.socrata.com/resource/2p8v-m8st.json?$jsonp=socrata_callback&$limit=100&$offset=0'></script>
+</body>
+</html>
