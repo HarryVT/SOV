@@ -9,7 +9,7 @@ Address: <span id="jstreet"></span><br />
 Phone: <span id="jphone"></span><br /> 
 </p>
 <script>
-url = 'get("http://opendata.socrata.com/api/views/n5m4-mism/rows.json?search=CIA")';
+var url = 'get("http://opendata.socrata.com/api/views/n5m4-mism/rows.json?search=CIA")';
 document.write(url)
 document.getElementById("jname").innerHTML=url.name 
 document.getElementById("jage").innerHTML=url.id 
