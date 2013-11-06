@@ -10,8 +10,7 @@ Search: <input type="text" name="test"><br>
 <input type="submit" value="Submit">
 </form>
 <script>
-var goget document.forms['submit_form']['test'].value;
-document.write(goget+'</br>')
+document.write(document.forms['submit_form']['test'].value);
 </script>
 <table border="1">
 <tr><td>Name</td><td>Description</td><td>Payment Date</td><td>Invoice Number</td><td>Invoice Date</td><td>Payment Amount</td></tr>
@@ -20,21 +19,9 @@ document.write(goget+'</br>')
     search
       for(var i = 0;i<search.length;i++)
     document.write('<tr><td>'+search[i].name+'</td><td>'+search[i].descr+'</td><td>'+search[i].paymentdate+'</td><td>'+search[i].invoice+'</td><td>'+search[i].invoicedate+'</td><td>'+search[i].voucher_paid_amount+'</td></tr>');
-    document.write("i = ");
-    document.write(i);
     }
     </script>
   <script src='https://vermont.demo.socrata.com/resource/2p8v-m8st.json?$jsonp=socrata_callback&$where=voucher_paid_amount < 500&$limit=100&$offset=0'></script>
-</table>
-<table border="1">
-<tr>
-<td>row 1, cell 1</td>
-<td>row 1, cell 2</td>
-</tr>
-<tr>
-<td>row 2, cell 1</td>
-<td>row 2, cell 2</td>
-</tr>
 </table>
 </body>
 </html>
