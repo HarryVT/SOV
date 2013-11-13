@@ -10,7 +10,7 @@ Search: <input type="text" name="test"><br>
 <input type="submit" value="Submit">
 </form>
 <script>
-document.forms['submit_form']['test'].value;
+go_get=document.forms['submit_form']['test'].value;
     document.write('go_get='+go_get);
 </script>
 <table border="1">
@@ -26,7 +26,7 @@ document.forms['submit_form']['test'].value;
 var head=document.getElementsByTagName('head')[0]
 var script=document.createElement('script')
 script.setAttribute('src', "https://vermont.demo.socrata.com/resource/2p8v-m8st.json?$jsonp=socrata_callback&$where=voucher_paid_amount < 500&$limit="+go_get+"&$offset=0")
-head.appendChild(script)    
+script.onload = script.onreadystatechange = socrata_callback;   
 document.write(script);
 </script>
 </table>
