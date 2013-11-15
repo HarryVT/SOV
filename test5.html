@@ -16,13 +16,13 @@ Search: <input type="text" name="test"><br>
     var socrata_callback = function(search){
     search
       for(var i = 0;i<search.length;i++)
-          amount=search[i].voucher_paid_amount
+    {     amount=search[i].voucher_paid_amount
           document.write(test+" "+amount+"</br>");
           document.write(test<amount+"</br>");
       if (test<amount)
-  {
-    document.write('<tr><td>'+search[i].name+'</td><td>'+search[i].descr+'</td><td>'+search[i].paymentdate+'</td><td>'+search[i].invoice+'</td><td>'+search[i].invoicedate+'</td><td>'+amount+'</td></tr>');
-  }
+      {
+        document.write('<tr><td>'+search[i].name+'</td><td>'+search[i].descr+'</td><td>'+search[i].paymentdate+'</td><td>'+search[i].invoice+'</td><td>'+search[i].invoicedate+'</td><td>'+amount+'</td></tr>');
+      }
     }
     </script>
 <script src='https://vermont.demo.socrata.com/resource/2p8v-m8st.json?$jsonp=socrata_callback&$where=voucher_paid_amount < 500&$limit=100&$offset=0'></script>
