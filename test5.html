@@ -17,6 +17,7 @@ Search: <input type="text" name="test"><br>
     search
       for(var i = 0;i<search.length;i++)
           document.write(test+" "+search[i].voucher_paid_amount+"</br>");
+          document.write(test<search[i].voucher_paid_amount+"</br>");
       if (test<search[i].voucher_paid_amount)
   {
     document.write('<tr><td>'+search[i].name+'</td><td>'+search[i].descr+'</td><td>'+search[i].paymentdate+'</td><td>'+search[i].invoice+'</td><td>'+search[i].invoicedate+'</td><td>'+search[i].voucher_paid_amount+'</td></tr>');
