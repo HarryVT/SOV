@@ -3,9 +3,7 @@
 <head>
     <meta charset="utf-8" />
     <title>JSON Sample</title>
-</head>
-<body>
-<script>
+    <script>
 function loadJSON(url) {
   var headID = document.getElementsByTagName("head")[0];         
   var newScript = document.createElement('script');
@@ -13,7 +11,10 @@ function loadJSON(url) {
       newScript.src = url;
   headID.appendChild(newScript);
 }
-
+</script>
+</head>
+<body>
+<script>
 function processJSON(feed){
   document.writeln(feed.title+'<BR>');
   for(i=0; i<feed.channel.items.length; i++) {
@@ -21,8 +22,6 @@ function processJSON(feed){
      document.writeln(feed.channel.items[i].title+"</a><BR>");
   }
 }
-
-
 loadJSON('http://www.hunlock.com/feed.php?format=JSON&callback=processJSON');
 </script>
 </body>
