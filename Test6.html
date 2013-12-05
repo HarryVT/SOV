@@ -17,8 +17,8 @@
   document.writeln('<table border="1"><tr><td>Name</td><td>Description</td><td>Payment Date</td><td>Invoice Number</td><td>Invoice Date</td><td>Payment Amount</td></tr>');
   for(i=0; i<feed.channel.items.length; i++) {
     document.write('<tr><td>'+feed[i].name+'</td><td>'+feed[i].descr+'</td><td>'+feed[i].paymentdate+'</td><td>'+feed[i].invoice+'</td><td>'+feed[i].invoicedate+'</td><td>'+feed[i].voucher_paid_amount+'</td></tr>');
-    document.write('</table>');
   }
+    document.write('</table>');
 }
 </script>
 <script>
