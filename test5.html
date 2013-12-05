@@ -13,12 +13,12 @@ function loadJSON(url) {
       newScript.src = url;
   headID.appendChild(newScript);
 }
-document.write('you are here');
 function processJSON(feed){
   document.writeln(feed.title+'<BR>');
   for(i=0; i<feed.channel.items.length; i++) {
-     document.write("<a href='"+feed.channel.items[i].link+"'>");
-     document.writeln(feed.channel.items[i].title+"</a><BR>");
+    document.write("<a href='"+feed.channel.items[i].link+"'>");
+    document.writeln(feed.channel.items[i].title+"</a><BR>");
+    document.write('you are here');
   }
 }
 loadJSON('http://www.hunlock.com/feed.php?format=JSON&JSONP=processJSON');
