@@ -21,7 +21,7 @@ function processJSON(feed){
      document.writeln(feed.channel.items[i].title+"</a><BR>");
   }
 }
-loadJSON('http://www.hunlock.com/feed.php?format=JSON&callback=processJSON');
+loadJSON('http://www.hunlock.com/feed.php?format=JSON&JSONP=processJSON');
 </script>
 </body>
 </html>
