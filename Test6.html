@@ -3,12 +3,13 @@
 <head>
     <meta charset="utf-8" />
     <title>JSON Sample</title>
-<script>    function loadJSON(url) {
-  var headID = document.getElementsByTagName("head")[0];         
-  var newScript = document.createElement('script');
-      newScript.type = 'text/javascript';
-      newScript.src = url;
-  headID.appendChild(newScript);
+<script>    
+    function loadJSON(url) {
+    var headID = document.getElementsByTagName("head")[0];         
+    var newScript = document.createElement('script');
+        newScript.type = 'text/javascript';
+        newScript.src = url;
+    headID.appendChild(newScript);
 }
 </script>
 </head>
@@ -27,20 +28,18 @@ go_get=document.forms['submit_form']['test'].value;
     function processJSON(feed){
   document.writeln(feed.title+'<BR>');
   for(i=0; i<feed.channel.items.length; i++) {
-    document.write('<tr><td>'+search[i].name+'</td><td>'+search[i].descr+'</td><td>'+search[i].paymentdate+'</td><td>'+search[i].invoice+'</td><td>'+search[i].invoicedate+'</td><td>'+search[i].voucher_paid_amount+'</td></tr>');
+    document.write('<tr><td>'+feed[i].name+'</td><td>'+feed[i].descr+'</td><td>'+feed[i].paymentdate+'</td><td>'+feed[i].invoice+'</td><td>'+feed[i].invoicedate+'</td><td>'+feed[i].voucher_paid_amount+'</td></tr>');
   }
 }
 </script>
 <script>
-
-./ var head=document.getElementsByTagName('head')[0]
+/* var head=document.getElementsByTagName('head')[0]
 var script=document.createElement('script')
-./ script.setAttribute('src', "https://vermont.demo.socrata.com/resource/2p8v-m8st.json?$jsonp=socrata_callback&$where=voucher_paid_amount < 500&$limit="+go_get+"&$offset=0")
-./ script.onload = script.onreadystatechange = socrata_callback;   
-./ document.write("Script"+script);
-
+script.setAttribute('src', "https://vermont.demo.socrata.com/resource/2p8v-m8st.json?$jsonp=socrata_callback&$where=voucher_paid_amount < 500&$limit="+go_get+"&$offset=0")
+script.onload = script.onreadystatechange = socrata_callback;   
+document.write("Script"+script);
+*/
 loadJSON('https://vermont.demo.socrata.com/resource/2p8v-m8st.json?$jsonp=loadJSON');
-    
 </script>
 </table>
 </body>
