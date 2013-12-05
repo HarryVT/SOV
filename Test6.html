@@ -3,24 +3,21 @@
 <head>
     <meta charset="utf-8" />
     <title>JSON Sample</title>
-<script>    
+</head>
+<body>
+    <script>
     function loadJSON(url) {
     var headID = document.getElementsByTagName("head")[0];         
     var newScript = document.createElement('script');
         newScript.type = 'text/javascript';
         newScript.src = url;
     headID.appendChild(newScript);
-}
-</script>
-</head>
-<body>
-<table border="1">
-<tr><td>Name</td><td>Description</td><td>Payment Date</td><td>Invoice Number</td><td>Invoice Date</td><td>Payment Amount</td></tr>
-    <script>
+    }
     function processJSON(feed){
-  document.writeln(feed.title+'<BR>');
+  document.writeln('<table border="1"><tr><td>Name</td><td>Description</td><td>Payment Date</td><td>Invoice Number</td><td>Invoice Date</td><td>Payment Amount</td></tr>');
   for(i=0; i<feed.channel.items.length; i++) {
     document.write('<tr><td>'+feed[i].name+'</td><td>'+feed[i].descr+'</td><td>'+feed[i].paymentdate+'</td><td>'+feed[i].invoice+'</td><td>'+feed[i].invoicedate+'</td><td>'+feed[i].voucher_paid_amount+'</td></tr>');
+    document.write('</table>');
   }
 }
 </script>
