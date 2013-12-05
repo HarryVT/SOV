@@ -5,35 +5,25 @@
     <title>JSON Sample</title>
 </head>
 <body>
-<form name="submit_form">
-Search: <input type="text" name="testval"><br>
-<input type="submit" value="Submit">
-</form>
 <script>
-  test = 100
-  var f = document.getElementById("submit_form");
-  f.onsubmit = function() {
-	var test = document.getElementById("testval");
-	}
-    document.write(test+"</br>");
+function loadJSON(url) {
+  var headID = document.getElementsByTagName("head")[0];         
+  var newScript = document.createElement('script');
+      newScript.type = 'text/javascript';
+      newScript.src = url;
+  headID.appendChild(newScript);
+}
+
+function processJSON(feed){
+  document.writeln(feed.title+'<BR>');
+  for(i=0; i<feed.channel.items.length; i++) {
+     document.write("<a href='"+feed.channel.items[i].link+"'>");
+     document.writeln(feed.channel.items[i].title+"</a><BR>");
+  }
+}
+
+
+loadJSON('http://www.hunlock.com/feed.php?format=JSON&callback=processJSON');
 </script>
-<table border="1">
-<tr><td>Name</td><td>Description</td><td>Payment Date</td><td>Invoice Number</td><td>Invoice Date</td><td>Payment Amount</td></tr>
-    <script>
-    var socrata_callback = function(search){
-    search
-      for(var i = 0;i<search.length;i++)
-    {     amount=search[i].voucher_paid_amount
-          document.write(test+" "+amount+"</br>");
-          document.write(test<amount+"</br>");
-      if (test<amount)
-      {
-        document.write('<tr><td>'+search[i].name+'</td><td>'+search[i].descr+'</td><td>'+search[i].paymentdate+'</td><td>'+search[i].invoice+'</td><td>'+search[i].invoicedate+'</td><td>'+amount+'</td></tr>');
-      }
-    } 
-    }
-    </script>
-<script src='https://vermont.demo.socrata.com/resource/2p8v-m8st.json?$jsonp=socrata_callback&$where=voucher_paid_amount < 500&$limit=100&$offset=0'></script>
-</table>
 </body>
 </html>
