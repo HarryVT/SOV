@@ -21,7 +21,18 @@ function processJSON(feed){
     document.writeln(feed.channel.items[i].title+"</a><BR>");
   }
 }
-loadJSON('http://www.hunlock.com/feed.php?format=JSON&JSONP=processJSON');
+try
+  {
+  loadJSON('http://www.hunlock.com/feed.php?format=JSON&JSONP=processJSON');
+  }
+catch(err)
+  {
+  txt="There was an error on this page.\n\n";
+  txt+="Error description: " + err.message + "\n\n";
+  txt+="Click OK to continue.\n\n";
+  alert(txt);
+  }
+
 </script>
 </body>
 </html>
