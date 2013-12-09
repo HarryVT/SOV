@@ -12,7 +12,7 @@ function loadJSON(url) {
     var newScript = document.createElement('script');
         newScript.type = 'text/javascript';
         newScript.src = url;
-    document.write(newScript);
+    document.write(newScript.src);
     headID.appendChild(newScript);
 }
 function processJSON(feed){
